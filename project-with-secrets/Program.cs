@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace project_with_secrets
 {
@@ -10,6 +7,8 @@ namespace project_with_secrets
     {
         static void Main(string[] args)
         {
+            var password = ConfigurationManager.AppSettings["password"];
+            Console.WriteLine($"Password is {password}");
         }
     }
 }
